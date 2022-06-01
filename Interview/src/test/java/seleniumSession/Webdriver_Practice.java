@@ -20,17 +20,24 @@ public class Webdriver_Practice {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		
-		driver.get("https://mytestingthoughts.com/Sample/home.html");
+//		driver.get("https://mytestingthoughts.com/Sample/home.html");
+//		
+//		System.out.println(driver.getTitle());
+//		
+//		driver.findElement(By.name("first_name")).sendKeys("Gaurav");
+//		driver.findElement(By.id("inlineRadioFemale")).click();
+//		Select hobbies = new Select(driver.findElement(By.id("exampleFormControlSelect2")));
+//		hobbies.selectByIndex(2);
+//		
+//		Select office  = new Select(driver.findElement(By.name("department")));
+//		office.selectByVisibleText("Accounting Office");
 		
-		System.out.println(driver.getTitle());
-		
-		driver.findElement(By.name("first_name")).sendKeys("Gaurav");
-		driver.findElement(By.id("inlineRadioFemale")).click();
-		Select hobbies = new Select(driver.findElement(By.id("exampleFormControlSelect2")));
-		hobbies.selectByIndex(2);
-		
-		Select office  = new Select(driver.findElement(By.name("department")));
-		office.selectByVisibleText("Accounting Office");
+//		Google search navigation transition
+		driver.get("https://www.google.com/");
+		driver.findElement(By.name("q")).sendKeys("Facebook");
+		driver.findElement(By.name("btnK")).click();
+		driver.findElement(By.linkText("Log In")).click();
+//		Google search navigation transition		
 		
 		
 		Thread.sleep(3000);
